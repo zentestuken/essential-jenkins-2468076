@@ -56,7 +56,7 @@ pipeline {
 
             junit allowEmptyResults: true, testResults: '**/pylint_junit.xml'
 
-            recordCoverage(tools: [[parser: 'COBERTURA', pattern: '**/coverage.xml']], sourceCodeRetention: 'LAST_BUILD')
+            recordCoverage(tools: [[parser: 'COBERTURA', pattern: '**/coverage.xml']], sourceCodeRetention: 'LAST_BUILD', sourceDirectories: [[path: './']])
         }
     }
 }
