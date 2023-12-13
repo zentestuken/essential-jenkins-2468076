@@ -60,7 +60,8 @@ pipeline {
             //     sourceFileResolver: sourceFiles('STORE_LAST_BUILD')
             recordCoverage(tools: [[parser: 'cobertura']], 
             sourceCodeRetention: 'LAST_BUILD', 
-            // sourceDirectories: [[path: 'plugin/src/main/java']])
+            // sourceDirectories: [[path: 'plugin/src/main/java']]
+            )
         }
     }
 }
