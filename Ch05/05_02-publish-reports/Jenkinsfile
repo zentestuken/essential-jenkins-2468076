@@ -52,8 +52,6 @@ pipeline {
                 sh 'venv/bin/coverage xml'
             }
 
-            junit allowEmptyResults: true, testResults: '**/pytest_junit.xml'
-
             junit allowEmptyResults: true, testResults: '**/pylint_junit.xml'
 
             recordCoverage(tools: [[parser: 'COBERTURA', pattern: '**/coverage.xml']], sourceCodeRetention: 'LAST_BUILD', sourceDirectories: [[path: './']])
